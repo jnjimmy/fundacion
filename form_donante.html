@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Donante</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script>
+        function validarDonante() {
+            const nombre = document.getElementById("nombre").value.trim();
+            const email = document.getElementById("email").value.trim();
+            if (nombre === "" || email === "") {
+                alert("Por favor, completa nombre y correo.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+
+<body class="bg-light">
+    <div class="container mt-5">
+        <h2 class="mb-4 text-primary">Agregar Donante</h2>
+        <form action="insertar_donante.php" method="POST" onsubmit="return validarDonante();">
+            <div class="form-group">
+                <label>Nombre:</label>
+                <input type="text" name="nombre" id="nombre" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label>Email:</label>
+                <input type="email" name="email" id="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label>Dirección:</label>
+                <input type="text" name="direccion" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Teléfono:</label>
+                <input type="text" name="telefono" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">Guardar Donante</button>
+        </form>
+    </div>
+</body>
+
+</html>
