@@ -24,11 +24,3 @@ Este proyecto consiste en el desarrollo de una aplicación web que permite:
 
 ---
 
-## Cómo contribuir
-
-Si deseas colaborar con el desarrollo del sitio web, sigue estos pasos:
-
-1. Haz un fork de este repositorio.
-2. Crea una rama nueva para tu funcionalidad:  
-   ```bash
-   git checkout -b nombre-de-tu-rama
